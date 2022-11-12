@@ -28,4 +28,8 @@ public class hasScore : MonoBehaviour
         EventBus.Publish<ScoreEvent>(new ScoreEvent(AddToScore));
     }
 
+    public int GetScore()
+    {
+        return score;
+    }
 }
