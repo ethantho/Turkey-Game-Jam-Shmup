@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public GameObject LPod;
     public GameObject RPod;
     bool focusing;
+    public SpriteRenderer HitBoxIndicator;
     
     void Start()
     {
@@ -56,7 +57,7 @@ public class PlayerController : MonoBehaviour
         //rb.AddForce(new Vector2(0, Input.GetAxis("Vertical") * speed));
         transform.position += new Vector3(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed, 0);
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             if(bulletDelayCounter >= bulletDelay)
             {
@@ -87,6 +88,8 @@ public class PlayerController : MonoBehaviour
         LPod.transform.position += new Vector3(1, 1, 0);
         RPod.transform.position += new Vector3(-1, 1, 0);
         focusing = true;
+        HitBoxIndicator.enabled = true;
+
     }
 
     void nonFocusMode()
@@ -94,5 +97,6 @@ public class PlayerController : MonoBehaviour
         LPod.transform.position += new Vector3(-1, -1, 0);
         RPod.transform.position += new Vector3(1, -1, 0);
         focusing = false;
+        HitBoxIndicator.enabled = false;
     }
 }

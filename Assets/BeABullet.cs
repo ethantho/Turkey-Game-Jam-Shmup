@@ -15,7 +15,7 @@ public class BeABullet : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position += new Vector3(0, 1f, 0);
+        transform.position += Vector3.up;
         bulletDeathCounter++;
 
         if (bulletDeathCounter > bulletDeathFrames)
