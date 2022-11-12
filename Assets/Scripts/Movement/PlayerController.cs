@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public GameObject RPod;
     bool focusing;
     public SpriteRenderer HitBoxIndicator;
+    public GameObject Beam;
+    
     
     void Start()
     {
@@ -34,7 +36,24 @@ public class PlayerController : MonoBehaviour
         }
 
 
-   
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            if (bulletDelayCounter >= bulletDelay)
+            {
+                shootBullet();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            //Debug.Log("Trying to fire");
+            if (canBeam())
+            {
+                //Debug.Log("CANBEAM PASSED");
+                StartCoroutine(fireBeam()); 
+
+            }
+        }
     }
 
 
@@ -57,13 +76,7 @@ public class PlayerController : MonoBehaviour
         //rb.AddForce(new Vector2(0, Input.GetAxis("Vertical") * speed));
         transform.position += new Vector3(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed, 0);
 
-        if (Input.GetKey(KeyCode.Mouse0))
-        {
-            if(bulletDelayCounter >= bulletDelay)
-            {
-                shootBullet();
-            }
-        }
+       
 
         if(bulletDelayCounter < bulletDelay)
         {
@@ -79,8 +92,8 @@ public class PlayerController : MonoBehaviour
     {
         bulletDelayCounter = 0;
         Instantiate(Bullet, transform.position + new Vector3(0, 1f, 0), Quaternion.identity);
-        Instantiate(Bullet, RPod.transform.position, Quaternion.identity);
-        Instantiate(Bullet, LPod.transform.position, Quaternion.identity);
+        Instantiate(Bullet, RPod.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
+        Instantiate(Bullet, LPod.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
     }
 
     void focusMode()
@@ -98,5 +111,26 @@ public class PlayerController : MonoBehaviour
         RPod.transform.position += new Vector3(1, -1, 0);
         focusing = false;
         HitBoxIndicator.enabled = false;
+    }
+
+    IEnumerator fireBeam()
+    {
+        Debug.Log("FIRING BEAM");
+        yield return new WaitForSeconds(0.5f);//chargeup
+
+        EffectManager.Start_CShake(0.5f, 0.3f);
+
+        Beam.GetComponent<SpriteRenderer>().enabled = true;
+        
+        yield return new WaitForSeconds(0.75f);
+
+        Beam.GetComponent<SpriteRenderer>().enabled = false;
+
+    }
+
+    bool canBeam()
+    {
+        return true;
+        //TODO
     }
 }
