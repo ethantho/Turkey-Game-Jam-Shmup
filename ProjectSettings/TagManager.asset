@@ -44,3 +44,9 @@ TagManager:
   - name: Bullet
     uniqueID: 3288663379
     locked: 0
+  - name: PowerUps
+    uniqueID: 3137994345
+    locked: 0
+  - name: Enemies
+    uniqueID: 1418413939
+    locked: 0
