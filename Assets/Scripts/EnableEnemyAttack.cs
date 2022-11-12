@@ -35,16 +35,16 @@ public class EnableEnemyAttack : MonoBehaviour
             enemy.GetComponent<EnemyShooter>().enabled = enable;
             if (enable == false)
             {
-                foreach (Transform child in enemy.transform)
+                /*foreach (Transform child in enemy.transform)
                 {
                     Destroy(child.gameObject);
-                }
+                }*/
+                Destroy(enemy);
             }
         }
 
         if (enemy.GetComponent<Animator>() != null)
         {
-            Debug.Log("activate animated enemy:" + enable.ToString());
             enemy.GetComponent<Animator>().SetBool("Activated", enable);
         }
     }

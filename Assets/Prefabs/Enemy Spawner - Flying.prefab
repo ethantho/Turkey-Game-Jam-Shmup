@@ -143,7 +143,7 @@ PrefabInstance:
     - target: {fileID: 7873152583466818734, guid: 260f37c311ef13c45b28f4668c28a3d7, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5620796556550196887, guid: 94c359cd7e1c27343a1e70b1de7f0fce, type: 3}
     - target: {fileID: 7873152583466818734, guid: 260f37c311ef13c45b28f4668c28a3d7, type: 3}
       propertyPath: gridAim
       value: 1

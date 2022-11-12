@@ -50,7 +50,7 @@ public class hasHealth : MonoBehaviour
             }
             else
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
         }
     }
