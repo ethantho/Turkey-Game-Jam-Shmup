@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     bool focusing;
     public SpriteRenderer HitBoxIndicator;
     public GameObject Beam;
-    public int flourishMeter = 100;
     
     
     void Start()
@@ -122,7 +121,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("FIRING BEAM");
         yield return new WaitForSeconds(0.5f);//chargeup
-        flourishMeter -= 100;
+        GetComponent<collectsPollen>().UsePollen();
         EffectManager.Start_CShake(0.5f, 0.3f);
 
         Beam.GetComponent<SpriteRenderer>().enabled = true;
@@ -137,7 +136,7 @@ public class PlayerController : MonoBehaviour
 
     bool canBeam()
     {
-        return flourishMeter >= 100;
+        return (GetComponent<collectsPollen>().CurrentPollen() > 10);
         //TODO
     }
 }

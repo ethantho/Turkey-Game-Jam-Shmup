@@ -20,7 +20,7 @@ public class hasHealth : MonoBehaviour
         if (GetComponent<PlayerController>() != null)
         {
             isPlayer = true;
-            UI.SetHealthUI(maxHealth);
+            UI.SetUI(maxHealth);
         }
         else
         {
@@ -38,7 +38,7 @@ public class hasHealth : MonoBehaviour
         //update UI
         if (isPlayer)
         {
-            UI.UpdateHealthUI(currentHealth);
+            UI.UpdateUI(currentHealth);
         }
 
         //death

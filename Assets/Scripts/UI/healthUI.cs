@@ -11,7 +11,7 @@ public class healthUI : MonoBehaviour
     float maxHealth;
     Vector3 centralPosition;
 
-    public void SetHealthUI(float maxHealthIn)
+    public void SetUI(float maxHealthIn)
     {
         maxHealth = maxHealthIn;
 
@@ -21,7 +21,7 @@ public class healthUI : MonoBehaviour
         centralPosition = transform.localPosition;
     }
 
-    public void UpdateHealthUI(float currentHealthIn)
+    public void UpdateUI(float currentHealthIn)
     {
         //shrink and shift green part of UI dependent on what % of max health they have
         currentHealth = currentHealthIn;
