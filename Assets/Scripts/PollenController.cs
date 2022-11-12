@@ -4,19 +4,8 @@ using UnityEngine;
 
 public class PollenController : MonoBehaviour
 {
-    //public Collider2D PlayerPickupCollider;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //collect pollen
+    [SerializeField] int numPoints;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,9 +19,12 @@ public class PollenController : MonoBehaviour
                 collision.gameObject.GetComponent<PlayerController>().flourishMeter = 100;
             }
             Destroy(this.gameObject);
+
             //Player gets pollen
+            collision.gameObject.GetComponent<hasScore>().Scored(numPoints);
+
+
             //play a subtle sound
-            
         }
     }
 }

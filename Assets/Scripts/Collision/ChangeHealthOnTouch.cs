@@ -12,6 +12,7 @@ public class ChangeHealthOnTouch : MonoBehaviour
         if (collision.gameObject.GetComponent<hasHealth>())
         {
             collision.gameObject.GetComponent<hasHealth>().ChangeHealth(changeHealthBy);
+            Destroy(gameObject);
         }
     }
 }
