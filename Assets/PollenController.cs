@@ -24,9 +24,15 @@ public class PollenController : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerController>() != null)
         {
             Debug.Log("ITS THE PLAYER");
+            collision.gameObject.GetComponent<PlayerController>().flourishMeter += 10;
+            if(collision.gameObject.GetComponent<PlayerController>().flourishMeter > 100)
+            {
+                collision.gameObject.GetComponent<PlayerController>().flourishMeter = 100;
+            }
             Destroy(this.gameObject);
             //Player gets pollen
             //play a subtle sound
+            
         }
     }
 }
