@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d05c1419313a87479d32d10309b76f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2987539088935548490, guid: 31fa608932983b34593fb30b0c3a56bf, type: 3}
   attack: {fileID: 1844736174199739328, guid: 08c5a35a373518f40a82d80aa80ded4d, type: 3}
   waitTimeBetween: 2
   speedOfAttack: 150

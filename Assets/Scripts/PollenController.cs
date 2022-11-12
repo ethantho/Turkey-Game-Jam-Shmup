@@ -13,7 +13,7 @@ public class PollenController : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerController>() != null)
         {
             Debug.Log("ITS THE PLAYER");
-            collision.gameObject.GetComponent<collectsPollen>().CollectedPollen();
+            collision.gameObject.GetComponent<collectsPollen>().CollectedPollen(numPoints);
 
             Destroy(this.gameObject);
 

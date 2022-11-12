@@ -15,9 +15,9 @@ public class collectsPollen : MonoBehaviour
         pollenUI.UpdateUI(0);
     }
 
-    public void CollectedPollen()
+    public void CollectedPollen(int numPoints)
     {
-        currentPollen++;
+        currentPollen = currentPollen + numPoints;
         pollenUI.UpdateUI(currentPollen);
     }
 
