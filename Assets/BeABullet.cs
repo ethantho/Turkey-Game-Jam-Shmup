@@ -6,6 +6,7 @@ public class BeABullet : MonoBehaviour
 {
     public int bulletDeathCounter = 0;
     public int bulletDeathFrames = 120;
+    public int bulletSpeedMultiplier;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +16,23 @@ public class BeABullet : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position += Vector3.up;
+        
         bulletDeathCounter++;
 
         if (bulletDeathCounter > bulletDeathFrames)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        transform.position += Vector3.up * Time.deltaTime * bulletSpeedMultiplier;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<IsBorder>() != null)
         {
             Destroy(this.gameObject);
         }
