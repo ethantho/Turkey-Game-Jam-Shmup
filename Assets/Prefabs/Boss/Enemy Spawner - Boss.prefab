@@ -149,12 +149,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4675670721105020125, guid: 9139c73fa5c37e944ad4bd93fa7619ad, type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4675670721105020125, guid: 9139c73fa5c37e944ad4bd93fa7619ad, type: 3}
       propertyPath: hasHealthUI
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4675670721105020125, guid: 9139c73fa5c37e944ad4bd93fa7619ad, type: 3}
+      propertyPath: explosionBig
+      value: 
+      objectReference: {fileID: 646867304661565910, guid: b912672d2dc8d3f48854a0a14f6f7584, type: 3}
     - target: {fileID: 4675670721105020127, guid: 9139c73fa5c37e944ad4bd93fa7619ad, type: 3}
       propertyPath: m_RootOrder
       value: 0

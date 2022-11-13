@@ -366,6 +366,7 @@ MonoBehaviour:
   focusSpeed: 0.125
   bulletDelay: 6
   bulletDelayCounter: 0
+  invincibility: 70
   Bullet: {fileID: 153044270015700533, guid: 1dee2d5d235158a40b5a697e5c279e41, type: 3}
   LPod: {fileID: 1100038094277516494}
   RPod: {fileID: 7196174645106145754}
@@ -451,6 +452,8 @@ MonoBehaviour:
   maxHealth: 20
   UI: {fileID: 0}
   PollenPickup: {fileID: 0}
+  explosionEnemy: {fileID: 0}
+  explosionBig: {fileID: 0}
   hasHealthUI: 0
 --- !u!114 &3304769141996030810
 MonoBehaviour:

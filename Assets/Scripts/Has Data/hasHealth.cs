@@ -106,6 +106,7 @@ public class hasHealth : MonoBehaviour
             //death
             if (currentHealth <= 0)
             {
+                Debug.Log("Something is trying to die");
                 if (isPlayer)
                 {
                     dead = true;
@@ -122,6 +123,7 @@ public class hasHealth : MonoBehaviour
                     }
                     if (hasHealthUI)//was a boss kill homies
                     {
+                        Debug.Log("Boss is trying to die");
                         EffectManager.Start_BigExplosion(transform.position.x,transform.position.y);
                     }
 
