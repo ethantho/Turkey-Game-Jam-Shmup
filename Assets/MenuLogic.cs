@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuLogic : MonoBehaviour
 {
@@ -26,5 +27,13 @@ public class MenuLogic : MonoBehaviour
             optbutton.SetActive(true);
             exitbutton.SetActive(true);
         }
+    }
+
+    public void to_game() {
+        SceneManager.LoadScene("Main Scene", LoadSceneMode.Single);
+    }
+
+    public void to_exit() {
+        Application.Quit();
     }
 }
