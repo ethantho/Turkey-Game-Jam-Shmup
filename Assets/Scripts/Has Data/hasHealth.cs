@@ -60,7 +60,7 @@ public class hasHealth : MonoBehaviour
                 //gameObject.SetActive(false);
 
 
-                if (hasHealthUI)//was a boss kill homies
+                /*if (hasHealthUI)//was a boss kill homies
                 {
                     if (transform.parent.gameObject.GetComponent<BossController>() != null)
                     {
@@ -74,7 +74,7 @@ public class hasHealth : MonoBehaviour
                             Destroy(child.gameObject);
                         }
                     }
-                }
+                }*/
 
                 Destroy(gameObject);
 

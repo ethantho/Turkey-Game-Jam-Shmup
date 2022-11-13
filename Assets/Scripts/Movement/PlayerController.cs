@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
     bool focusing;
     public SpriteRenderer HitBoxIndicator;
     public GameObject Beam;
-    public GameObject Beam2;
     
     
     void Start()
@@ -133,13 +132,11 @@ public class PlayerController : MonoBehaviour
 
         Beam.GetComponent<SpriteRenderer>().enabled = true;
         Beam.GetComponent<BoxCollider2D>().enabled = true;
-        Beam2.GetComponent<SpriteRenderer>().enabled = true;
 
         yield return new WaitForSeconds(5f);
 
         Beam.GetComponent<SpriteRenderer>().enabled = false;
         Beam.GetComponent<BoxCollider2D>().enabled = false;
-        Beam2.GetComponent<SpriteRenderer>().enabled = false;
 
     }
 

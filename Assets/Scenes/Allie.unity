@@ -447,10 +447,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beam Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3304769141996030814, guid: 42d53ddb3cba3a345b6950bdae0d6ed4, type: 3}
-      propertyPath: Beam2
-      value: 
-      objectReference: {fileID: 633054778}
     - target: {fileID: 3304769141996030815, guid: 42d53ddb3cba3a345b6950bdae0d6ed4, type: 3}
       propertyPath: m_Size.x
       value: 0.49924004
@@ -590,11 +586,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &633054778 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4298174221673515666, guid: 42d53ddb3cba3a345b6950bdae0d6ed4, type: 3}
-  m_PrefabInstance: {fileID: 633054773}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &633054785
 Animator:
   serializedVersion: 4
