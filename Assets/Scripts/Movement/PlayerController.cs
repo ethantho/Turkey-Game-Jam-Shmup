@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("FIRING BEAM");
         yield return new WaitForSeconds(0.5f);//chargeup
         GetComponent<collectsPollen>().UsePollen();
-        EffectManager.Start_CShake(0.5f, 0.3f);
+        //EffectManager.Start_CShake(0.5f, 0.3f);
 
         Beam.GetComponent<SpriteRenderer>().enabled = true;
         Beam.GetComponent<BoxCollider2D>().enabled = true;

@@ -36,5 +36,10 @@ public class BeABullet : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        /*if (collision.GetComponent<hasHealth>() != null)
+        {
+            collision.GetComponent<hasHealth>().
+        }*/
     }
 }
