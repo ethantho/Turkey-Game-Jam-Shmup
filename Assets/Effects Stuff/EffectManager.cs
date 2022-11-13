@@ -17,7 +17,7 @@ public class EffectManager : MonoBehaviour
     [SerializeField] public GameObject bigExplosionPref;
 
 
-    private static EffectManager instance;
+    public static EffectManager instance;
     private static int hashCounter = 0;
 
     void Awake(){

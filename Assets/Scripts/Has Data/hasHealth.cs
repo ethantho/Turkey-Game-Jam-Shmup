@@ -21,6 +21,7 @@ public class hasHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         startingLocalPos = transform.localPosition;
+        explosionEnemy = EffectManager.instance.explosionPref;
 
         if (GetComponent<PlayerController>() != null)
         {
@@ -51,9 +52,9 @@ public class hasHealth : MonoBehaviour
             }
             else
             {
-                Instantiate(PollenPickup, transform.position, transform.rotation);
-
+                Debug.Log("Confirmation,");
                 Instantiate(explosionEnemy,transform.position,transform.rotation);
+                Instantiate(PollenPickup, transform.position, transform.rotation);
                 GetComponent<AudioSource>().Play();
                 //gameObject.SetActive(false);
 
