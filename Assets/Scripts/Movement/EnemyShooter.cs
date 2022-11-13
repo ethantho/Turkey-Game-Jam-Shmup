@@ -48,21 +48,9 @@ public class EnemyShooter : MonoBehaviour
     { 
         for (int i = 0; i < burstNum; i++)
         {
-<<<<<<< Updated upstream
-            //GameObject bullet = Instantiate(attack, transform);
-            GameObject bullet = Instantiate(attack, transform.position, transform.rotation);
-            Vector2 directionToPlayer = (target.transform.position - transform.position).normalized; //+ new Vector3(0f, 5f, 0f)).normalized;
-            Debug.Log("NORMALIZED: " + directionToPlayer);
-            //float timeToImpact = (target.transform.position - transform.position).magnitude
-            //if going directly left, right, up, or down
-            /*
-            if (gridAim)
-=======
-
             GameObject bullet;
             //grounded enemies child it
             if (animator == null)
->>>>>>> Stashed changes
             {
                 bullet = Instantiate(attack, transform);
             }
@@ -72,7 +60,6 @@ public class EnemyShooter : MonoBehaviour
             }
             
             Vector2 directionToPlayer = (target.transform.position - transform.position).normalized; //+ new Vector3(0f, 5f, 0f)).normalized;
-            //float timeToImpact = (target.transform.position - transform.position).magnitude
 
             //goes directly in red arrows direction
             if (shootDirectlyDown)
@@ -80,28 +67,21 @@ public class EnemyShooter : MonoBehaviour
                 directionToPlayer = transform.right;
 
             }
-            //shoot bullet
 
+
+            //shoot bullet
             bullet.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-<<<<<<< Updated upstream
-            //bullet.GetComponent<Rigidbody2D>().AddForce(directionToPlayer * speedOfAttack);
-            bullet.GetComponent<Rigidbody2D>().velocity = (directionToPlayer * speedOfAttack) + new Vector2(0, 5.5f);
-            Debug.Log(bullet.GetComponent<Rigidbody2D>().velocity);
-            yield return new WaitForSeconds(0.2f);
-=======
             if (animator != null)
             {
                 bullet.GetComponent<Rigidbody2D>().velocity = (directionToPlayer * speedOfAttack) + new Vector2(0, 5.5f);
             }
             else
             {
-                //bullet.GetComponent<Rigidbody2D>().AddForce(directionToPlayer * speedOfAttack);
                 bullet.GetComponent<Rigidbody2D>().velocity = (directionToPlayer * speedOfAttack);
 
             }
 
             yield return new WaitForSeconds(waitTimeBetweenEach);
->>>>>>> Stashed changes
         }
     }
 }
