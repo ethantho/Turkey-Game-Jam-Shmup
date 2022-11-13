@@ -11,6 +11,7 @@ public class EnemyShooter : MonoBehaviour
     [SerializeField] float speedOfAttack;
     [SerializeField] int burstNum;
     [SerializeField] bool shootDirectlyDown; //directly left, right, up, or down
+    [SerializeField] bool readyToShoot = true;
 
     Animator animator;
     float waitCounter;
