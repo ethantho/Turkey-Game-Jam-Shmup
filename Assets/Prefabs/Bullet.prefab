@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5130578711066917735}
   - component: {fileID: -6348949002037837057}
   - component: {fileID: 8086503566347543621}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bullet
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletDeathCounter: 0
-  bulletDeathFrames: 30
+  bulletDeathFrames: 1000
   bulletSpeedMultiplier: 75
 --- !u!70 &-5130578711066917735
 CapsuleCollider2D:
