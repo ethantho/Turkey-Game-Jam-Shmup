@@ -53,7 +53,7 @@ public class hasHealth : MonoBehaviour
             {
                 Instantiate(PollenPickup, transform.position, transform.rotation);
                 GetComponent<AudioSource>().Play();
-                gameObject.SetActive(false);
+                gameObject.SetActive(false); 
             }
         }
     }
