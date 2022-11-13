@@ -10,11 +10,13 @@ public class ChangeHealthOnTouch : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        explosionBullet = EffectManager.instance.bulletPref;
         if (collision.gameObject.tag != gameObject.tag)
         {
             if (collision.gameObject.GetComponent<hasHealth>())
             {
                 collision.gameObject.GetComponent<hasHealth>().ChangeHealth(changeHealthBy);
+                EffectManager.Start_Flicker(collision.gameObject.GetComponent<SpriteRenderer>(),2f);
             }
 
             //destroy no matter what
