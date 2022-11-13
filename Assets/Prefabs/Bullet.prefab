@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletDeathCounter: 0
-  bulletDeathFrames: 1000
+  bulletDeathFrames: 15
   bulletSpeedMultiplier: 75
 --- !u!70 &-5130578711066917735
 CapsuleCollider2D:

@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss Bullets R
       objectReference: {fileID: 0}
+    - target: {fileID: 7873152583466818730, guid: 260f37c311ef13c45b28f4668c28a3d7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7873152583466818733, guid: 260f37c311ef13c45b28f4668c28a3d7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -210,6 +214,10 @@ PrefabInstance:
     - target: {fileID: 7873152583466818721, guid: 260f37c311ef13c45b28f4668c28a3d7, type: 3}
       propertyPath: m_Name
       value: Boss Meat Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873152583466818730, guid: 260f37c311ef13c45b28f4668c28a3d7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7873152583466818733, guid: 260f37c311ef13c45b28f4668c28a3d7, type: 3}
       propertyPath: m_RootOrder
@@ -346,6 +354,10 @@ PrefabInstance:
     - target: {fileID: 7873152583466818721, guid: 260f37c311ef13c45b28f4668c28a3d7, type: 3}
       propertyPath: m_Name
       value: Boss Bullets L
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873152583466818730, guid: 260f37c311ef13c45b28f4668c28a3d7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7873152583466818733, guid: 260f37c311ef13c45b28f4668c28a3d7, type: 3}
       propertyPath: m_RootOrder
@@ -890,6 +902,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss Bullets M
       objectReference: {fileID: 0}
+    - target: {fileID: 7873152583466818730, guid: 260f37c311ef13c45b28f4668c28a3d7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7873152583466818733, guid: 260f37c311ef13c45b28f4668c28a3d7, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -973,6 +989,10 @@ PrefabInstance:
     - target: {fileID: 7873152583466818734, guid: 260f37c311ef13c45b28f4668c28a3d7, type: 3}
       propertyPath: waitTimeBetweenBurst
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873152583466818735, guid: 260f37c311ef13c45b28f4668c28a3d7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7873152583466818735, guid: 260f37c311ef13c45b28f4668c28a3d7, type: 3}
       propertyPath: maxHealth
