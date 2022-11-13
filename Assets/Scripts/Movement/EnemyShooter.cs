@@ -47,10 +47,12 @@ public class EnemyShooter : MonoBehaviour
     { 
         for (int i = 0; i < burstNum; i++)
         {
-            GameObject bullet = Instantiate(attack, transform);
-            Vector2 directionToPlayer = target.transform.position - transform.position;
+            //GameObject bullet = Instantiate(attack, transform);
+            GameObject bullet = Instantiate(attack, transform.position, transform.rotation);
+            Vector2 directionToPlayer = (target.transform.position - transform.position + new Vector3(0f, 5f, 0f)).normalized;
 
             //if going directly left, right, up, or down
+            /*
             if (gridAim)
             {
                 if (Mathf.Abs(directionToPlayer.y) > Mathf.Abs(directionToPlayer.x))
@@ -72,11 +74,11 @@ public class EnemyShooter : MonoBehaviour
                 Vector3 original = bullet.transform.eulerAngles;
                 bullet.transform.LookAt(target.transform);
                 bullet.transform.eulerAngles = new Vector3(0, 0, bullet.transform.eulerAngles.x + 90f);
-            }
+            }*/
 
             //shoot bullet
-            bullet.GetComponent<Rigidbody2D>().AddForce(directionToPlayer * speedOfAttack);
-
+            //bullet.GetComponent<Rigidbody2D>().AddForce(directionToPlayer * speedOfAttack);
+            bullet.GetComponent<Rigidbody2D>().velocity = (directionToPlayer * speedOfAttack);
             yield return new WaitForSeconds(0.2f);
         }
     }

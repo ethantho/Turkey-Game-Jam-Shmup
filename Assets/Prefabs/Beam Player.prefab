@@ -263,8 +263,8 @@ GameObject:
   - component: {fileID: 1100038095897750362}
   - component: {fileID: 3304769141996030785}
   - component: {fileID: 3304769141996030814}
-  - component: {fileID: 3304769141996030815}
   - component: {fileID: 3304769141996030812}
+  - component: {fileID: 3304769141996030815}
   - component: {fileID: 3304769141996030813}
   - component: {fileID: 3304769141996030804}
   - component: {fileID: 3304769141996030810}
@@ -372,6 +372,22 @@ MonoBehaviour:
   RGun: {fileID: 7196174643449323983}
   HitBoxIndicator: {fileID: 1100038094732821392}
   Beam: {fileID: 7196174644139972870}
+--- !u!58 &3304769141996030812
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304769141996030805}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0003412068, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.24205437
 --- !u!61 &3304769141996030815
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -398,22 +414,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 1.1891794}
   m_EdgeRadius: 0
---- !u!58 &3304769141996030812
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304769141996030805}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0003412068, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.24205437
 --- !u!50 &3304769141996030813
 Rigidbody2D:
   serializedVersion: 4
@@ -687,6 +687,7 @@ MonoBehaviour:
   changeHealthBy: -2
   damageDelayCounter: 0.1
   damageDelay: 0.1
+  Player: {fileID: 0}
 --- !u!1 &7196174645106145754
 GameObject:
   m_ObjectHideFlags: 0
