@@ -153,3 +153,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeHealthBy: -1
+  explosionBullet: {fileID: 854335570962007974, guid: 4fd2dc6318a2c9844acdf6286e6613da, type: 3}

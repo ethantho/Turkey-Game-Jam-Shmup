@@ -7,6 +7,7 @@ public class hasHealth : MonoBehaviour
     [SerializeField] private int maxHealth;
     [SerializeField] private healthUI UI;
     [SerializeField] GameObject PollenPickup;
+    [SerializeField] GameObject explosionEnemy;
 
     private bool isPlayer;
     int currentHealth;
@@ -52,6 +53,7 @@ public class hasHealth : MonoBehaviour
             else
             {
                 Instantiate(PollenPickup, transform.position, transform.rotation);
+                Instantiate(explosionEnemy,transform.position,transform.rotation);
                 GetComponent<AudioSource>().Play();
                 gameObject.SetActive(false); 
             }

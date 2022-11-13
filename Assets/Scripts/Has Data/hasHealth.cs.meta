@@ -3,7 +3,10 @@ guid: 0e149d491a517aa4e80c9aa890c43450
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - UI: {instanceID: 0}
+  - PollenPickup: {instanceID: 0}
+  - ExplosionEnemy: {fileID: 3317533494824387839, guid: 9001201458ae2b14191df1a8344edd43, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
