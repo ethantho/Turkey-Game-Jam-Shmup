@@ -91,7 +91,7 @@ AnimatorStateMachine:
     m_Position: {x: 430, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3152968554343000106}
-    m_Position: {x: 350.8, y: 268, z: 0}
+    m_Position: {x: 350, y: 270, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -109,7 +109,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Swoop Right
+  m_Name: SquareMoveRight
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -123,7 +123,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c11605330a3f115408e676abe0a1bfa4, type: 2}
+  m_Motion: {fileID: 7400000, guid: 2f2d380c27e7f2a4ea199f997b5b4621, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -161,7 +161,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Enemy3SwoopRight
+  m_Name: Enemy4
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Activated

@@ -167,9 +167,11 @@ MonoBehaviour:
   attack: {fileID: 1844736174199739328, guid: 08c5a35a373518f40a82d80aa80ded4d, type: 3}
   waitTimeBetweenBurst: 3
   waitTimeBetweenEach: 0.3
-  speedOfAttack: 15
+  speedOfAttack: 8
   burstNum: 3
   shootDirectlyDown: 0
+  readyToShoot: 1
+  partOfAnimatedUnit: 0
 --- !u!82 &-6000056452090777507
 AudioSource:
   m_ObjectHideFlags: 0
