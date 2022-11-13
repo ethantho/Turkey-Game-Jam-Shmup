@@ -41,7 +41,7 @@ public class hasHealth : MonoBehaviour
 
     private void Update()
     {
-        if (dead && GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("FinishedDeath"))
+        if (dead)
         {
             if (isPlayer)
             {
@@ -55,7 +55,7 @@ public class hasHealth : MonoBehaviour
 
                 Instantiate(explosionEnemy,transform.position,transform.rotation);
                 GetComponent<AudioSource>().Play();
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
 
 
                 if (hasHealthUI)//was a boss kill homies
@@ -110,10 +110,7 @@ public class hasHealth : MonoBehaviour
 
                     GetComponent<AudioSource>().Play();
 
-                    if (GetComponent<Animator>() != null)
-                    {
-                        GetComponent<Animator>().Play("Death");
-                    }
+                    
 
 
                     dead = true;
