@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class scoreUI : MonoBehaviour
 {
-    Text scoreText;
+    TextMeshProUGUI scoreText;
     [SerializeField] hasScore player;
 
     Subscription<ScoreEvent> scored;
@@ -13,12 +13,12 @@ public class scoreUI : MonoBehaviour
     void Start()
     {
         scored = EventBus.Subscribe<ScoreEvent>(HasScored);
-        scoreText = gameObject.GetComponent<Text>();
+        scoreText = GetComponent<TextMeshProUGUI>();
     }
 
     void HasScored(ScoreEvent slay)
     {
-        scoreText.text = "Score" + player.ToString();
+        scoreText.SetText("Score: " + player.GetScore().ToString());
     }
 
 

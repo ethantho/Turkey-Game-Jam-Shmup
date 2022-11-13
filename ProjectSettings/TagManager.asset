@@ -11,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Border
+  - CanPassBorder
   - 
   - 
   - 
@@ -49,4 +49,7 @@ TagManager:
     locked: 0
   - name: Enemies
     uniqueID: 1418413939
+    locked: 0
+  - name: Player
+    uniqueID: 1230720145
     locked: 0

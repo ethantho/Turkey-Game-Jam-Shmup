@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public GameObject Bullet;
     public GameObject LPod;
     public GameObject RPod;
+    public GameObject LGun;
+    public GameObject RGun;
     bool focusing;
     public SpriteRenderer HitBoxIndicator;
     public GameObject Beam;
@@ -91,7 +93,9 @@ public class PlayerController : MonoBehaviour
     void shootBullet()
     {
         bulletDelayCounter = 0;
-        Instantiate(Bullet, transform.position + new Vector3(0, 1f, 0), Quaternion.identity);
+        //Instantiate(Bullet, transform.position + new Vector3(0, 1f, 0), Quaternion.identity);
+        Instantiate(Bullet, RGun.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
+        Instantiate(Bullet, LGun.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
         Instantiate(Bullet, RPod.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
         Instantiate(Bullet, LPod.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
     }
@@ -117,20 +121,22 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("FIRING BEAM");
         yield return new WaitForSeconds(0.5f);//chargeup
-
+        GetComponent<collectsPollen>().UsePollen();
         EffectManager.Start_CShake(0.5f, 0.3f);
 
         Beam.GetComponent<SpriteRenderer>().enabled = true;
-        
+        Beam.GetComponent<BoxCollider2D>().enabled = true;
+
         yield return new WaitForSeconds(0.75f);
 
         Beam.GetComponent<SpriteRenderer>().enabled = false;
+        Beam.GetComponent<BoxCollider2D>().enabled = false;
 
     }
 
     bool canBeam()
     {
-        return true;
+        return (GetComponent<collectsPollen>().CurrentPollen() > 10);
         //TODO
     }
 }
