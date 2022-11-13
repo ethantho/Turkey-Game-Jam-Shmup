@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -6000056452090777507}
   m_Layer: 7
   m_Name: Enemy Base- Grounded
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,10 +165,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2987539088935548490, guid: 31fa608932983b34593fb30b0c3a56bf, type: 3}
   attack: {fileID: 1844736174199739328, guid: 08c5a35a373518f40a82d80aa80ded4d, type: 3}
-  waitTimeBetween: 2
+  waitTimeBetweenBurst: 3
+  waitTimeBetweenEach: 0.3
   speedOfAttack: 15
   burstNum: 3
-  gridAim: 0
+  shootDirectlyDown: 0
 --- !u!82 &-6000056452090777507
 AudioSource:
   m_ObjectHideFlags: 0
