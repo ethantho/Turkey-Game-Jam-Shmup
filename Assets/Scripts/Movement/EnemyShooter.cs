@@ -50,6 +50,7 @@ public class EnemyShooter : MonoBehaviour
             //GameObject bullet = Instantiate(attack, transform);
             GameObject bullet = Instantiate(attack, transform.position, transform.rotation);
             Vector2 directionToPlayer = (target.transform.position - transform.position).normalized; //+ new Vector3(0f, 5f, 0f)).normalized;
+            Debug.Log("NORMALIZED: " + directionToPlayer);
             //float timeToImpact = (target.transform.position - transform.position).magnitude
             //if going directly left, right, up, or down
             /*
@@ -81,7 +82,9 @@ public class EnemyShooter : MonoBehaviour
             bullet.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             //bullet.GetComponent<Rigidbody2D>().AddForce(directionToPlayer * speedOfAttack);
             bullet.GetComponent<Rigidbody2D>().velocity = (directionToPlayer * speedOfAttack) + new Vector2(0, 5.5f);
+            Debug.Log(bullet.GetComponent<Rigidbody2D>().velocity);
             yield return new WaitForSeconds(0.2f);
         }
     }
 }
+
