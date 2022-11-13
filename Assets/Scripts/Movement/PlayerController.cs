@@ -98,6 +98,7 @@ public class PlayerController : MonoBehaviour
         Instantiate(Bullet, LGun.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
         Instantiate(Bullet, RPod.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
         Instantiate(Bullet, LPod.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
+        GetComponent<AudioSource>().Play();
     }
 
     void focusMode()
