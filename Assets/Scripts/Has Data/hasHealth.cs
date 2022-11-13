@@ -7,6 +7,7 @@ public class hasHealth : MonoBehaviour
     [SerializeField] private int maxHealth;
     [SerializeField] private healthUI UI;
     [SerializeField] GameObject PollenPickup;
+    [SerializeField] GameObject explosionEnemy;
     [SerializeField] bool hasHealthUI;
 
     private bool isPlayer;
@@ -20,6 +21,7 @@ public class hasHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         startingLocalPos = transform.localPosition;
+        explosionEnemy = EffectManager.instance.explosionPref;
 
         if (GetComponent<PlayerController>() != null)
         {
@@ -40,7 +42,7 @@ public class hasHealth : MonoBehaviour
 
     private void Update()
     {
-        if (dead && GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("FinishedDeath"))
+        if (dead)
         {
             if (isPlayer)
             {
@@ -50,7 +52,12 @@ public class hasHealth : MonoBehaviour
             }
             else
             {
+                Debug.Log("Confirmation,");
+                Instantiate(explosionEnemy,transform.position,transform.rotation);
                 Instantiate(PollenPickup, transform.position, transform.rotation);
+                GetComponent<AudioSource>().Play();
+                //gameObject.SetActive(false);
+
 
                 if (hasHealthUI)//was a boss kill homies
                 {
@@ -104,10 +111,7 @@ public class hasHealth : MonoBehaviour
 
                     GetComponent<AudioSource>().Play();
 
-                    if (GetComponent<Animator>() != null)
-                    {
-                        GetComponent<Animator>().Play("Death");
-                    }
+                    
 
 
                     dead = true;

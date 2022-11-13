@@ -151,6 +151,7 @@ MonoBehaviour:
   maxHealth: 5
   UI: {fileID: 0}
   PollenPickup: {fileID: 6956778847292167808, guid: 1f814a80e8cdaa349b77136d7e7a7386, type: 3}
+  ExplosionEnemy: {fileID: 3317533494824387839, guid: 9001201458ae2b14191df1a8344edd43, type: 3}
 --- !u!114 &7873152583466818734
 MonoBehaviour:
   m_ObjectHideFlags: 0

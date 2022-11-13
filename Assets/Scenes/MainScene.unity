@@ -137744,6 +137744,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraRef: {fileID: 519420028}
+  explosionPref: {fileID: 3317533494824387839, guid: 9001201458ae2b14191df1a8344edd43, type: 3}
+  bigExplosionPref: {fileID: 646867304661565910, guid: b912672d2dc8d3f48854a0a14f6f7584, type: 3}
 --- !u!4 &1457024502
 Transform:
   m_ObjectHideFlags: 0
@@ -139890,6 +139892,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6186217897485060611, guid: dd3679a1a54aa8845a5bf566f8f33249, type: 3}
+      propertyPath: explosionEnemy
+      value: 
+      objectReference: {fileID: 3317533494824387839, guid: 9001201458ae2b14191df1a8344edd43, type: 3}
+    - target: {fileID: 6186217897768671444, guid: dd3679a1a54aa8845a5bf566f8f33249, type: 3}
+      propertyPath: explosionEnemy
+      value: 
+      objectReference: {fileID: 3317533494824387839, guid: 9001201458ae2b14191df1a8344edd43, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd3679a1a54aa8845a5bf566f8f33249, type: 3}
 --- !u!1 &2987539089101900646 stripped

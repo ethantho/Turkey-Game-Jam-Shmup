@@ -13,8 +13,11 @@ public class EffectManager : MonoBehaviour
     [SerializeField] public static Color[] glitchColors = new Color[] {Color.cyan,Color.green,Color.red};
     [SerializeField] public GameObject cameraRef;
 
+    [SerializeField] public GameObject explosionPref;
+    [SerializeField] public GameObject bigExplosionPref;
 
-    private static EffectManager instance;
+
+    public static EffectManager instance;
     private static int hashCounter = 0;
 
     void Awake(){
@@ -299,6 +302,48 @@ public class EffectManager : MonoBehaviour
 
     }
     #endregion
+
+    //BigExplosion - Spawns amt explosion objects, one every time seconds, at location loc_x, loc_y, with max offset scale.
+    #region BIGEXPLOSION
+
+    public static int Start_BigExplosion(float loc_x, float loc_y, float scale = 3f, float amt = 10f, float time = .2f){
+        int key = generateHash();
+        parameters[key] = new float[] {loc_x,loc_y,scale,amt,time};
+        coros[key] = Effect_BigExplosion(key);
+        instance.StartCoroutine(coros[key]);
+        return key;
+    }
+    
+
+    public static IEnumerator Effect_BigExplosion(int key){
+        
+
+        float timer = 0.0f;
+        while(true){
+            
+            timer+=Time.deltaTime;
+            if(timer>parameters[key][4]){
+                parameters[key][3] -= 1f;
+                var scale = parameters[key][2];
+                if(parameters[key][3]<0){
+                    GameObject explos = Instantiate(instance.bigExplosionPref, new Vector3(parameters[key][0]+Random.Range(-1*scale,scale),parameters[key][1]+Random.Range(-1*scale,scale),0),Quaternion.identity);
+                    explos.transform.localScale = new Vector3(16f, 16f, 16f);
+                    StopCoroutine(key);
+                    break;
+                }
+                timer = 0;
+                Instantiate(instance.explosionPref, new Vector3(parameters[key][0]+Random.Range(-1*scale,scale),parameters[key][1]+Random.Range(-1*scale,scale),0),Quaternion.identity);
+            }
+        
+            yield return null;
+        }
+
+    }
+    #endregion
+
+    //
+
+
 
 
 
