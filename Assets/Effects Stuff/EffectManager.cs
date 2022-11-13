@@ -13,6 +13,7 @@ public class EffectManager : MonoBehaviour
     [SerializeField] public static Color[] glitchColors = new Color[] {Color.cyan,Color.green,Color.red};
     [SerializeField] public GameObject cameraRef;
 
+    [SerializeField] public GameObject bulletPref;
     [SerializeField] public GameObject explosionPref;
     [SerializeField] public GameObject bigExplosionPref;
 
@@ -83,20 +84,27 @@ public class EffectManager : MonoBehaviour
     public static IEnumerator Effect_Flicker(SpriteRenderer image, int key){
         
         float timer = 0.0f;
+        float timer2 = 0.0f;
         bool visible = false;
         while(true){
             timer+=Time.deltaTime;
+            timer2+=Time.deltaTime;
             if(timer>=(.2f/parameters[key][0])){
                 var tempColor = image.color;
                 if(visible){
                     tempColor.a = 1f;
+                    if(timer2>1f){
+                        image.color = tempColor;
+                        StopCoroutine(key);
+                        break;
+                    }
                 }
                 else{
                     tempColor.a = parameters[key][1];
                 }
+                image.color = tempColor;
                 visible = !visible;
 
-                image.color = tempColor;
                 timer = 0f;
             }
             yield return null;
@@ -332,6 +340,8 @@ public class EffectManager : MonoBehaviour
                     break;
                 }
                 timer = 0;
+                parameters[key][1]+=.5f;
+                Instantiate(instance.explosionPref, new Vector3(parameters[key][0]+Random.Range(-1*scale,scale),parameters[key][1]+Random.Range(-1*scale,scale),0),Quaternion.identity);
                 Instantiate(instance.explosionPref, new Vector3(parameters[key][0]+Random.Range(-1*scale,scale),parameters[key][1]+Random.Range(-1*scale,scale),0),Quaternion.identity);
             }
         

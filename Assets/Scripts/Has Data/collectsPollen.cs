@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class collectsPollen : MonoBehaviour
 {
-    [SerializeField] healthUI pollenUI;
+    [SerializeField] public healthUI pollenUI;
     [SerializeField] int maxPollen;
 
     int currentPollen;
@@ -17,7 +17,7 @@ public class collectsPollen : MonoBehaviour
 
     public void CollectedPollen(int numPoints)
     {
-        currentPollen = currentPollen + numPoints;
+        currentPollen = Mathf.Min(currentPollen + numPoints,maxPollen);
         pollenUI.UpdateUI(currentPollen);
     }
 
@@ -28,6 +28,7 @@ public class collectsPollen : MonoBehaviour
 
     public void UsePollen()
     {
-        currentPollen = currentPollen - 10;
+        currentPollen = 0;
+        pollenUI.UpdateUI(currentPollen);
     }
 }

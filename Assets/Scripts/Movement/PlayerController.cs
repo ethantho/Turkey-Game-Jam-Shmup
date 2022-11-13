@@ -122,13 +122,15 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("FIRING BEAM");
         yield return new WaitForSeconds(0.5f);//chargeup
+        EffectManager.Start_Shake(GetComponent<collectsPollen>().pollenUI.transform,5f);
+        yield return new WaitForSeconds(0.05f);//chargeup
         GetComponent<collectsPollen>().UsePollen();
         //EffectManager.Start_CShake(0.5f, 0.3f);
 
         Beam.GetComponent<SpriteRenderer>().enabled = true;
         Beam.GetComponent<BoxCollider2D>().enabled = true;
 
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(5f);
 
         Beam.GetComponent<SpriteRenderer>().enabled = false;
         Beam.GetComponent<BoxCollider2D>().enabled = false;
@@ -137,7 +139,7 @@ public class PlayerController : MonoBehaviour
 
     bool canBeam()
     {
-        return (GetComponent<collectsPollen>().CurrentPollen() > 10);
+        return (GetComponent<collectsPollen>().CurrentPollen() >= 100);
         //TODO
     }
 }

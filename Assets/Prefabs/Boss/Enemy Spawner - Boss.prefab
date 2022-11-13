@@ -100,10 +100,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BossWaves:
   - {fileID: 1136562244705945179, guid: 7fea3760ee75b8546bea75b8c42e2ae3, type: 3}
-  - {fileID: 2770800417897360235, guid: b54463ea3ec287549b8a6871882280a8, type: 3}
-  - {fileID: 1136562244705945179, guid: 7fea3760ee75b8546bea75b8c42e2ae3, type: 3}
+  - {fileID: 2737095964967455140, guid: b64a9952f09bce745a6e36da27aa864c, type: 3}
   - {fileID: 3907729055881458731, guid: a3976aeef4eafd4478fd1089f657be94, type: 3}
+  - {fileID: 2737095964967455140, guid: b64a9952f09bce745a6e36da27aa864c, type: 3}
   - {fileID: 1136562244705945179, guid: 7fea3760ee75b8546bea75b8c42e2ae3, type: 3}
+  - {fileID: 2770800417897360235, guid: b54463ea3ec287549b8a6871882280a8, type: 3}
+  - {fileID: 2737095964967455140, guid: b64a9952f09bce745a6e36da27aa864c, type: 3}
   Boss: {fileID: 4870670604219471894}
   bossesHealth: {fileID: 0}
 --- !u!1001 &250874074741906629

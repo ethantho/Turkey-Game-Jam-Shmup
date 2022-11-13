@@ -8,6 +8,7 @@ public class hasHealth : MonoBehaviour
     [SerializeField] private healthUI UI;
     [SerializeField] GameObject PollenPickup;
     [SerializeField] GameObject explosionEnemy;
+    [SerializeField] GameObject explosionBig;
     [SerializeField] bool hasHealthUI;
 
     private bool isPlayer;
@@ -22,6 +23,7 @@ public class hasHealth : MonoBehaviour
         currentHealth = maxHealth;
         startingLocalPos = transform.localPosition;
         explosionEnemy = EffectManager.instance.explosionPref;
+        explosionBig = EffectManager.instance.bigExplosionPref;
 
         if (GetComponent<PlayerController>() != null)
         {
@@ -52,7 +54,6 @@ public class hasHealth : MonoBehaviour
             }
             else
             {
-                Debug.Log("Confirmation,");
                 Instantiate(explosionEnemy,transform.position,transform.rotation);
                 Instantiate(PollenPickup, transform.position, transform.rotation);
                 GetComponent<AudioSource>().Play();
@@ -88,7 +89,10 @@ public class hasHealth : MonoBehaviour
         {
             //update health
             currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-
+            if (isPlayer)
+                {
+                    EffectManager.Start_CShake(.5f, .5f);
+                }
             //update UI
             if (hasHealthUI)
             {
@@ -109,9 +113,13 @@ public class hasHealth : MonoBehaviour
                         GetComponent<EnemyShooter>().enabled = false;
                     }
 
-                    GetComponent<AudioSource>().Play();
-
-                    
+                    if (GetComponent<AudioSource>()!= null){
+                        GetComponent<AudioSource>().Play();
+                    }
+                    if (hasHealthUI)//was a boss kill homies
+                    {
+                        EffectManager.Start_BigExplosion(transform.position.x,transform.position.y);
+                    }
 
 
                     dead = true;
