@@ -12,6 +12,9 @@ public class EnemyShooter : MonoBehaviour
     [SerializeField] int burstNum;
     [SerializeField] bool shootDirectlyDown; //directly left, right, up, or down
 
+
+    [SerializeField] bool partOfAnimatedUnit; //FOR BOSSES ROTATE GAMEOBJECT
+
     Animator animator;
     float waitCounter;
 
@@ -54,9 +57,18 @@ public class EnemyShooter : MonoBehaviour
             {
                 bullet = Instantiate(attack, transform);
             }
+            else if (partOfAnimatedUnit)
+            {
+                bullet = Instantiate(attack, transform.parent.parent);
+                bullet.transform.position = transform.position;
+            }
             else
             {
-                bullet = Instantiate(attack, transform.position, transform.rotation);
+                //bullet = Instantiate(attack, transform.position, transform.rotation);
+
+                //attach to spawner
+                bullet = Instantiate(attack, transform.parent);
+                bullet.transform.position = transform.position;
             }
             
             Vector2 directionToPlayer = (target.transform.position - transform.position).normalized; //+ new Vector3(0f, 5f, 0f)).normalized;
@@ -71,15 +83,17 @@ public class EnemyShooter : MonoBehaviour
 
             //shoot bullet
             bullet.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            bullet.GetComponent<Rigidbody2D>().velocity = (directionToPlayer * speedOfAttack);
+            /*
             if (animator != null)
             {
                 bullet.GetComponent<Rigidbody2D>().velocity = (directionToPlayer * speedOfAttack) + new Vector2(0, 5.5f);
             }
             else
             {
-                bullet.GetComponent<Rigidbody2D>().velocity = (directionToPlayer * speedOfAttack);
 
-            }
+
+            }*/
 
             yield return new WaitForSeconds(waitTimeBetweenEach);
         }
