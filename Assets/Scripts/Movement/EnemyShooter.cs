@@ -10,6 +10,7 @@ public class EnemyShooter : MonoBehaviour
     [SerializeField] float speedOfAttack;
     [SerializeField] int burstNum;
     [SerializeField] bool gridAim; //directly left, right, up, or down
+    [SerializeField] bool readyToShoot = false;
 
     Animator animator;
     float waitCounter;
@@ -36,7 +37,7 @@ public class EnemyShooter : MonoBehaviour
             GetComponent<EnemyShooter>().enabled = false;
         }
 
-        if (waitCounter <= 0)
+        if (waitCounter <= 0 && readyToShoot)
         {
             waitCounter = waitTimeBetween;
             StartCoroutine(Shoot());
