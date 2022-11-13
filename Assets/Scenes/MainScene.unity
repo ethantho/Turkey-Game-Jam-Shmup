@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 74797076}
   - component: {fileID: 74797078}
   - component: {fileID: 74797077}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flying Enemy Start Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 97833496}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 118134357}
   - component: {fileID: 118134359}
   - component: {fileID: 118134358}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flying Enemy Stop Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 119726091}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -688,7 +688,7 @@ GameObject:
   - component: {fileID: 197517943}
   - component: {fileID: 197517945}
   - component: {fileID: 197517944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flying Enemy Start Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -858,7 +858,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 356734472}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1025,7 +1025,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 467168033}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1672,6 +1672,7 @@ MonoBehaviour:
   maxHealth: 3
   UI: {fileID: 0}
   PollenPickup: {fileID: 6956778847292167808, guid: 1f814a80e8cdaa349b77136d7e7a7386, type: 3}
+  hasHealthUI: 0
 --- !u!50 &680543994
 Rigidbody2D:
   serializedVersion: 4
@@ -135695,7 +135696,7 @@ GameObject:
   - component: {fileID: 775391977}
   - component: {fileID: 775391979}
   - component: {fileID: 775391978}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flying Enemy Stop Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135773,7 +135774,7 @@ GameObject:
   - component: {fileID: 789228446}
   - component: {fileID: 789228448}
   - component: {fileID: 789228447}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flying Enemy Stop Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135939,7 +135940,7 @@ GameObject:
   - component: {fileID: 1044612131}
   - component: {fileID: 1044612133}
   - component: {fileID: 1044612132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flying Enemy Stop Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136197,7 +136198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1083086904}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Animated Enemy Triggers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136326,7 +136327,7 @@ GameObject:
   - component: {fileID: 1113594676}
   - component: {fileID: 1113594678}
   - component: {fileID: 1113594677}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flying Enemy Stop Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136581,6 +136582,7 @@ MonoBehaviour:
   maxHealth: 3
   UI: {fileID: 0}
   PollenPickup: {fileID: 6956778847292167808, guid: 1f814a80e8cdaa349b77136d7e7a7386, type: 3}
+  hasHealthUI: 0
 --- !u!50 &1125999432
 Rigidbody2D:
   serializedVersion: 4
@@ -137292,6 +137294,7 @@ MonoBehaviour:
   maxHealth: 3
   UI: {fileID: 0}
   PollenPickup: {fileID: 6956778847292167808, guid: 1f814a80e8cdaa349b77136d7e7a7386, type: 3}
+  hasHealthUI: 0
 --- !u!50 &1317929317
 Rigidbody2D:
   serializedVersion: 4
@@ -137402,7 +137405,7 @@ GameObject:
   - component: {fileID: 1386172075}
   - component: {fileID: 1386172077}
   - component: {fileID: 1386172076}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flying Enemy Start Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137478,7 +137481,7 @@ GameObject:
   - component: {fileID: 1391991180}
   - component: {fileID: 1391991182}
   - component: {fileID: 1391991181}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flying Enemy Start Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137556,7 +137559,7 @@ GameObject:
   - component: {fileID: 1393978643}
   - component: {fileID: 1393978645}
   - component: {fileID: 1393978644}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flying Enemy Start Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137644,7 +137647,7 @@ GameObject:
   - component: {fileID: 1454354994}
   - component: {fileID: 1454354996}
   - component: {fileID: 1454354995}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flying Enemy Stop Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137765,7 +137768,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1511780986}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave 3 Swoop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137968,7 +137971,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1636497638}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138472,6 +138475,7 @@ MonoBehaviour:
   maxHealth: 3
   UI: {fileID: 0}
   PollenPickup: {fileID: 6956778847292167808, guid: 1f814a80e8cdaa349b77136d7e7a7386, type: 3}
+  hasHealthUI: 0
 --- !u!50 &1714075879
 Rigidbody2D:
   serializedVersion: 4
@@ -138706,7 +138710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1895143171}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138741,7 +138745,7 @@ GameObject:
   - component: {fileID: 1899666727}
   - component: {fileID: 1899666729}
   - component: {fileID: 1899666728}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flying Enemy Stop Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138996,6 +139000,7 @@ MonoBehaviour:
   maxHealth: 3
   UI: {fileID: 0}
   PollenPickup: {fileID: 6956778847292167808, guid: 1f814a80e8cdaa349b77136d7e7a7386, type: 3}
+  hasHealthUI: 0
 --- !u!50 &1905197116
 Rigidbody2D:
   serializedVersion: 4
@@ -139285,7 +139290,7 @@ GameObject:
   - component: {fileID: 1983673144}
   - component: {fileID: 1983673146}
   - component: {fileID: 1983673145}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flying Enemy Start Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139424,7 +139429,7 @@ GameObject:
   - component: {fileID: 2062839972}
   - component: {fileID: 2062839974}
   - component: {fileID: 2062839973}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flying Enemy Start Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
