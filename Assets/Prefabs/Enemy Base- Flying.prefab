@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e149d491a517aa4e80c9aa890c43450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 3
   UI: {fileID: 0}
   PollenPickup: {fileID: 6956778847292167808, guid: 1f814a80e8cdaa349b77136d7e7a7386, type: 3}
 --- !u!114 &4675670721105020124
@@ -171,6 +171,7 @@ MonoBehaviour:
   speedOfAttack: 15
   burstNum: 4
   shootDirectlyDown: 0
+  readyToShoot: 1
 --- !u!95 &3287732388109867119
 Animator:
   serializedVersion: 4
