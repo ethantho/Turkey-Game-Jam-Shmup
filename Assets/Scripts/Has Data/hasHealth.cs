@@ -88,11 +88,15 @@ public class hasHealth : MonoBehaviour
         if (!dead)
         {
             //update health
+            if(!isPlayer){
             currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-            if (isPlayer)
-                {
+            }
+            else if(GetComponent<PlayerController>().invincibility<=0){
+                currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
                     EffectManager.Start_CShake(.5f, .5f);
-                }
+                GetComponent<PlayerController>().invincibility=70;
+            }
+                
             //update UI
             if (hasHealthUI)
             {

@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     private float speed;
     public int bulletDelay = 6;
     public int bulletDelayCounter = 0;
+
+    public int invincibility = 70;
     public GameObject Bullet;
     public GameObject LPod;
     public GameObject RPod;
@@ -28,6 +30,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        invincibility--;
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             focusMode();
