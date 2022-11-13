@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("FIRING BEAM");
         yield return new WaitForSeconds(0.5f);//chargeup
-        EffectManager.Start_Shake(GetComponent<collectsPollen>().pollenUI.transform,5f);
+        EffectManager.Start_Shake(GetComponent<collectsPollen>().pollenUI.transform.parent,5f);
         yield return new WaitForSeconds(0.05f);//chargeup
         GetComponent<collectsPollen>().UsePollen();
         //EffectManager.Start_CShake(0.5f, 0.3f);
