@@ -24,7 +24,8 @@ public class healthUI : MonoBehaviour
     public void UpdateUI(float currentHealthIn)
     {
         //shrink and shift green part of UI dependent on what % of max health they have
-        currentHealth = currentHealthIn;
+        currentHealth = Mathf.Clamp(currentHealthIn, 0, maxHealth);
+
 
         float newWidth = maxWidth * (currentHealth / maxHealth);
 

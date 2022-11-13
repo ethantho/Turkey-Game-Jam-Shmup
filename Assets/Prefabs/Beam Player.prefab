@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 3304769141996030804}
   - component: {fileID: 3304769141996030810}
   - component: {fileID: 1100038095897750363}
+  - component: {fileID: 303543243640821075}
   m_Layer: 0
   m_Name: Beam Player
   m_TagString: Player
@@ -449,6 +450,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   UI: {fileID: 0}
+  PollenPickup: {fileID: 0}
+  hasHealthUI: 0
 --- !u!114 &3304769141996030810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,6 +479,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pollenUI: {fileID: 0}
   maxPollen: 100
+--- !u!95 &303543243640821075
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304769141996030805}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb140b5aa1f96e04f81471076430fec0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7196174643449323983
 GameObject:
   m_ObjectHideFlags: 0
