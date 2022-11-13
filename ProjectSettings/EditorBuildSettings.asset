@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 9d3948ba7bee53240a59db91141758bf
+  - enabled: 1
+    path: Assets/Scenes/Allie.unity
+    guid: 9bce41b87499ba147a5c31cd550349e7
   m_configObjects: {}
