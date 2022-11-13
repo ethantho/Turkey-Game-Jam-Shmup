@@ -109,7 +109,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FlyInFromRight
+  m_Name: Swoop Left
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -123,7 +123,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: dbf3c8309f7893b48b9253aef30e499c, type: 2}
+  m_Motion: {fileID: 7400000, guid: c617f7b72ec5091499b01c11bbf1b253, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -161,7 +161,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Enemy2
+  m_Name: Enemy3SwoopRight
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Activated
