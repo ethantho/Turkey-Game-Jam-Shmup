@@ -85,7 +85,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -6652895786649197633}
-    m_Position: {x: 309.8, y: 74, z: 0}
+    m_Position: {x: 310, y: 70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3707171283728211647}
     m_Position: {x: 430, y: 170, z: 0}
@@ -109,7 +109,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FlyIn-FromLeft-1
+  m_Name: FromLeftPauseShoot
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

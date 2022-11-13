@@ -11,6 +11,7 @@ public class EnemyShooter : MonoBehaviour
     [SerializeField] float speedOfAttack;
     [SerializeField] int burstNum;
     [SerializeField] bool shootDirectlyDown; //directly left, right, up, or down
+    [SerializeField] bool readyToShoot = true;
 
 
     [SerializeField] bool partOfAnimatedUnit; //FOR BOSSES ROTATE GAMEOBJECT
@@ -40,7 +41,7 @@ public class EnemyShooter : MonoBehaviour
             GetComponent<EnemyShooter>().enabled = false;
         }
 
-        if (waitCounter <= 0)
+        if (waitCounter <= 0 && readyToShoot)
         {
             waitCounter = waitTimeBetweenBurst;
             StartCoroutine(Shoot());
