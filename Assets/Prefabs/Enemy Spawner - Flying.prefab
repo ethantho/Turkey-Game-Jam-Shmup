@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Base- Flying
       objectReference: {fileID: 0}
+    - target: {fileID: 4675670721105020125, guid: 9139c73fa5c37e944ad4bd93fa7619ad, type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4675670721105020127, guid: 9139c73fa5c37e944ad4bd93fa7619ad, type: 3}
       propertyPath: m_RootOrder
       value: 0
