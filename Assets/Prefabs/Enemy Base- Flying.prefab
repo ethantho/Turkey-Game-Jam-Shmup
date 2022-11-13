@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3062763683976017799}
   m_Layer: 7
   m_Name: Enemy Base- Flying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,10 +166,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 5620796556550196887, guid: 94c359cd7e1c27343a1e70b1de7f0fce, type: 3}
   attack: {fileID: 1844736174199739328, guid: 08c5a35a373518f40a82d80aa80ded4d, type: 3}
-  waitTimeBetween: 3.5
+  waitTimeBetweenBurst: 3
+  waitTimeBetweenEach: 0.3
   speedOfAttack: 15
   burstNum: 4
-  gridAim: 1
+  shootDirectlyDown: 0
 --- !u!95 &3287732388109867119
 Animator:
   serializedVersion: 4

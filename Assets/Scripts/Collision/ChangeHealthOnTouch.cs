@@ -9,10 +9,14 @@ public class ChangeHealthOnTouch : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if (collision.gameObject.GetComponent<hasHealth>())
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag != gameObject.tag)
         {
-            collision.gameObject.GetComponent<hasHealth>().ChangeHealth(changeHealthBy);
+            if (collision.gameObject.GetComponent<hasHealth>())
+            {
+                collision.gameObject.GetComponent<hasHealth>().ChangeHealth(changeHealthBy);
+            }
+
+            //destroy no matter what
             Destroy(gameObject);
         }
     }

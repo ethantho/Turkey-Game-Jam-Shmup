@@ -13,6 +13,7 @@ public class EnableEnemyAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //dynamic enemies
         if (dynamicEnemyTrigger && collision.gameObject.tag == "Player")
         {
             foreach (GameObject enemy in toEnable)
@@ -20,7 +21,8 @@ public class EnableEnemyAttack : MonoBehaviour
                 ChangeEnemyState(enemy);
             }
         }
-        else
+        //for grounded enemies
+        else if (!dynamicEnemyTrigger)
         {
             ChangeEnemyState(collision.gameObject);
         }
@@ -35,10 +37,6 @@ public class EnableEnemyAttack : MonoBehaviour
             enemy.GetComponent<EnemyShooter>().enabled = enable;
             if (enable == false)
             {
-                /*foreach (Transform child in enemy.transform)
-                {
-                    Destroy(child.gameObject);
-                }*/
                 Destroy(enemy);
             }
         }

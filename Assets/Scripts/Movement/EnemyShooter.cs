@@ -6,11 +6,11 @@ public class EnemyShooter : MonoBehaviour
 {
     [SerializeField] GameObject target;
     [SerializeField] GameObject attack;
-    [SerializeField] float waitTimeBetween;
+    [SerializeField] float waitTimeBetweenBurst;
+    [SerializeField] float waitTimeBetweenEach;
     [SerializeField] float speedOfAttack;
     [SerializeField] int burstNum;
-    [SerializeField] bool gridAim; //directly left, right, up, or down
-    [SerializeField] bool readyToShoot = false;
+    [SerializeField] bool shootDirectlyDown; //directly left, right, up, or down
 
     Animator animator;
     float waitCounter;
@@ -39,7 +39,7 @@ public class EnemyShooter : MonoBehaviour
 
         if (waitCounter <= 0 && readyToShoot)
         {
-            waitCounter = waitTimeBetween;
+            waitCounter = waitTimeBetweenBurst;
             StartCoroutine(Shoot());
         }
     }
@@ -48,43 +48,40 @@ public class EnemyShooter : MonoBehaviour
     { 
         for (int i = 0; i < burstNum; i++)
         {
-            //GameObject bullet = Instantiate(attack, transform);
-            GameObject bullet = Instantiate(attack, transform.position, transform.rotation);
-            Vector2 directionToPlayer = (target.transform.position - transform.position).normalized; //+ new Vector3(0f, 5f, 0f)).normalized;
-            Debug.Log("NORMALIZED: " + directionToPlayer);
-            //float timeToImpact = (target.transform.position - transform.position).magnitude
-            //if going directly left, right, up, or down
-            /*
-            if (gridAim)
+            GameObject bullet;
+            //grounded enemies child it
+            if (animator == null)
             {
-                if (Mathf.Abs(directionToPlayer.y) > Mathf.Abs(directionToPlayer.x))
-                {
-                    //directionToPlayer = directionToPlayer.normalized;
-                    directionToPlayer = new Vector3(0, directionToPlayer.y, 0);
-                }
-                else
-                {
-                    //directionToPlayer = directionToPlayer.normalized;
-                    directionToPlayer = new Vector3(directionToPlayer.x, 0, 0);
-                    //rotate to face player
-                    bullet.transform.eulerAngles = (new Vector3(0, 0, 90));
-                }
+                bullet = Instantiate(attack, transform);
             }
             else
             {
-                //rotate to face player
-                Vector3 original = bullet.transform.eulerAngles;
-                bullet.transform.LookAt(target.transform);
-                bullet.transform.eulerAngles = new Vector3(0, 0, bullet.transform.eulerAngles.x + 90f);
-            }*/
+                bullet = Instantiate(attack, transform.position, transform.rotation);
+            }
+            
+            Vector2 directionToPlayer = (target.transform.position - transform.position).normalized; //+ new Vector3(0f, 5f, 0f)).normalized;
+
+            //goes directly in red arrows direction
+            if (shootDirectlyDown)
+            {
+                directionToPlayer = transform.right;
+
+            }
+
 
             //shoot bullet
-
             bullet.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            //bullet.GetComponent<Rigidbody2D>().AddForce(directionToPlayer * speedOfAttack);
-            bullet.GetComponent<Rigidbody2D>().velocity = (directionToPlayer * speedOfAttack) + new Vector2(0, 5.5f);
-            Debug.Log(bullet.GetComponent<Rigidbody2D>().velocity);
-            yield return new WaitForSeconds(0.2f);
+            if (animator != null)
+            {
+                bullet.GetComponent<Rigidbody2D>().velocity = (directionToPlayer * speedOfAttack) + new Vector2(0, 5.5f);
+            }
+            else
+            {
+                bullet.GetComponent<Rigidbody2D>().velocity = (directionToPlayer * speedOfAttack);
+
+            }
+
+            yield return new WaitForSeconds(waitTimeBetweenEach);
         }
     }
 }
