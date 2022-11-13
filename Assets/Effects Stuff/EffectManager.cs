@@ -10,7 +10,7 @@ public class EffectManager : MonoBehaviour
     public static Dictionary<int,float[]> parameters = new Dictionary<int,float[]>(){};
     public static Dictionary<int,IEnumerator> coros = new Dictionary<int,IEnumerator>(){};
 
-    [SerializeField] public static Color[] glitchColors = new Color[] {Color.cyan,Color.green,Color.red};
+    [SerializeField] public static Color[] glitchColors = new Color[] {Color.cyan,Color.green,Color.red,Color.white};
     [SerializeField] public GameObject cameraRef;
 
     [SerializeField] public GameObject bulletPref;
