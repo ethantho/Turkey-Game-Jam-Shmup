@@ -100,6 +100,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4675670721105020125, guid: 9139c73fa5c37e944ad4bd93fa7619ad, type: 3}
+      propertyPath: explosionEnemy
+      value: 
+      objectReference: {fileID: 854335570962007974, guid: 4fd2dc6318a2c9844acdf6286e6613da, type: 3}
     - target: {fileID: 4675670721105020127, guid: 9139c73fa5c37e944ad4bd93fa7619ad, type: 3}
       propertyPath: m_RootOrder
       value: 0
