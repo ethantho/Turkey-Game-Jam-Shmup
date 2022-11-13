@@ -30,7 +30,7 @@ public class MenuLogic : MonoBehaviour
     }
 
     public void to_game() {
-        SceneManager.LoadScene("Main Scene", LoadSceneMode.Single);
+        SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
     }
 
     public void to_exit() {
